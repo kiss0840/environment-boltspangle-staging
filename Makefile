@@ -5,6 +5,7 @@ NAMESPACE := "jx-staging"
 OS := $(shell uname)
 
 build: clean
+        helm search
 	rm -rf requirements.lock
 	helm version
 	helm init --upgrade --stable-repo-url https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts
